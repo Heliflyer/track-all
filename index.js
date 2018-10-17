@@ -20,12 +20,13 @@ io.on("connection", socket => {
     socket.on("_ping",() => {
         console.log("Got ping");
         socket.emit("_pong");
+
     },
-        socket.on("_ping",() => {
-                console.log("Got ping");
-                socket.emit("_pong");
+        socket.on("_buttonclicked",() => {
+                console.log("Got _buttonclicked");
+                socket.emit("_buttonClickedReceived");
             }
-        )
+        ))
 });
 
 
